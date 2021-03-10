@@ -1,0 +1,56 @@
+package GB.J_one.Samostoiatelno.Zadachi;
+
+public class homework2 {
+
+
+    public static void main(String[] args) {
+        // 1 Задать целочисленный массив, состоящий из элементов 0 и 1. Например: [ 1, 1, 0, 0, 1, 0, 1, 1, 0, 0 ].
+        // Написать метод, заменяющий в принятом массиве 0 на 1, 1 на 0;
+
+        int[] myMass = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
+        for (int i = 0; i < 10; i++) {
+            myMass[i] = (myMass[i] == 0) ? 1 : 0;
+            System.out.println("1) " + myMass[i]);
+        }
+        System.out.println();
+
+        //2 Задать пустой целочисленный массив размером 8.
+        // Написать метод, который c помощью цикла заполнит его значениями 1 4 7 10 13 16 19 22;
+
+        int[] myArray = new int[8];
+        for (int i = 0; i < myArray.length; i++) {
+            myArray[i] = i * 3 + 1;
+            System.out.println("2) " + myArray[i]);
+        }
+        System.out.println();
+
+        //3 Задать массив [ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 ],
+        // написать метод, принимающий на вход массив и умножающий числа меньше 6 на 2;
+
+        int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) {
+                System.out.println("3) " + (arr[i] *= 2));
+            } else
+                System.out.println("3) " + arr[i]);
+        }
+        System.out.println();
+
+        //4 Задать одномерный массив. Написать методы поиска в нём минимального и максимального элемента;
+        int[] myArr = {3, 54, 12, 43, 58};
+        int min = myArr[0];
+        int max = myArr[1];
+        for (int i = 0; i < myArr.length; i++) {
+            if (myArr[i] < min) {
+                min = myArr[i];
+            }
+        }
+        for (int i = 0; i < myArr.length; i++) {
+            if (myArr[i] > max) {
+                max = myArr[i];
+            }
+        }
+        System.out.println("4) " + min + " " + max);
+        System.out.println();
+    }
+}
